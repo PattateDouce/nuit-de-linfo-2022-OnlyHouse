@@ -23,7 +23,7 @@
     <main>
         <h1>QUIZ</h1>
         <div class="quiz-container">
-            <div class="title"><span class="num-question">1</span> / 10 QUIZ sur les problématiques liées à la santé sexuelle</div>
+            <div class="title"><span id="num-question">1</span> / 10 QUIZ sur les problématiques liées à la santé sexuelle</div>
             <div class="question" id="question">Quel est le verbe irrégulier en anglais ?</div>
             <div class="reponses">
                 <form action="#">
@@ -31,10 +31,20 @@
                     <input type="radio" name="reponse" id="reponse2"> <label for="reponse2">Réponse 2</label><br>
                     <input type="radio" name="reponse" id="reponse3"> <label for="reponse3">Réponse 3</label><br>
 
-                    <input type="submit" value="Valider" class="valider">
+                    <input type="submit" value="Valider" id="valider" class="valider">
                 </form>
             </div>
         </div>
     </main>
+
+    <footer>
+       <ul>
+        <li><a href="#">Qui sommes nous ?</a></li>
+        <li><a href="#">Liens sources</a></li>
+        <li><a href="#">Aide</a></li>
+       </ul> 
+    </footer>
+
+    <script src="../src/app.js"></script>
 </body>
 </html>

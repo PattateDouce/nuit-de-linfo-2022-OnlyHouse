@@ -82,10 +82,12 @@ main{
 }
 
 .quiz-container .reponses .valider{
+    cursor: pointer;
     padding: 10px;
     border-radius: 20px;
-    border: 2px #000 solid;
-    background-color: red;
+    border: 1px #000 solid;
+    width: 100px;
+    background-color: #fff;
 }
 
 
