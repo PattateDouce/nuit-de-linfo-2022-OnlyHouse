@@ -21,29 +21,43 @@
     </header>
 
     <main>
-        <h1>QUIZ</h1>
-        <div class="quiz-container">
-            <div class="title"><span id="num-question">1</span> / 10 QUIZ sur les problématiques liées à la santé sexuelle</div>
-            <div class="question" id="question">Quel est le verbe irrégulier en anglais ?</div>
-            <div class="reponses">
-                <form action="#">
-                    <input type="radio" name="reponse" id="reponse1"> <label for="reponse1" id="reponse1">Réponse 1</label><br>
-                    <input type="radio" name="reponse" id="reponse2"> <label for="reponse2">Réponse 2</label><br>
-                    <input type="radio" name="reponse" id="reponse3"> <label for="reponse3">Réponse 3</label><br>
-
-                    <input type="submit" value="Valider" id="valider" class="valider">
-                </form>
+        <div class="quiz-container" id="quiz">
+            <div class="quiz-header">
+                <h2 id="question">Question Text</h2>
+                <ul>
+                    <li>
+                        <input type="radio" name="answer" id="a" class="answer">
+                        <label for="a" id="a_text">answer</label>
+                    </li>
+    
+                    <li>
+                        <input type="radio" name="answer" id="b" class="answer">
+                        <label for="b" id="b_text">answer</label>
+                    </li>
+    
+                    <li>
+                        <input type="radio" name="answer" id="c" class="answer">
+                        <label for="c" id="c_text">answer</label>
+                    </li>
+    
+                    <li>
+                        <input type="radio" name="answer" id="d" class="answer">
+                        <label for="d" id="d_text">answer</label>
+                    </li>
+                </ul>
             </div>
+    
+            <button id="submit">Submit</button>
         </div>
     </main>
 
-    <footer>
+    <!-- <footer>
        <ul>
         <li><a href="#">Qui sommes nous ?</a></li>
         <li><a href="#">Liens sources</a></li>
         <li><a href="#">Aide</a></li>
        </ul> 
-    </footer>
+    </footer> -->
 
     <script src="js/app.js"></script>
 </body>
