@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+/* ********** HEADER ********** */
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #B2B2B2;
+    padding: 20px 100px;
+}
+
+header .navbar ul li {
+    display: inline-block;
+}
+
+header .navbar a{
+    color: #fff;
+    margin-right: 20px;
+    font-size: 20px;
+}
+
+header .logo img{
+    width: 60px;
+    height: 60px;
+}
+
+/*
+======================== 
+        PAGE INDEX 
+========================
+*/
+
+main{
+}
+
+.quiz-container {
+    margin: auto;
+    width: 800px;
+    height: 500px;
+   background-color: red; 
+}
+
+/* FIN PAGE INDEX */
+
+/*
+======================== 
+        PAGE QUIZ 
+========================
+*/
+
+/*
+======================== 
+        PAGE ASSOCIATION 
+========================
+*/
+
+/* FIN PAGE ASSOCIATION */
+
+/* ********** FOOTER ******** */
