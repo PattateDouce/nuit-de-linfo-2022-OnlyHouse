@@ -1,56 +1,49 @@
-const quizData = [
-    {
-        question: "Which language runs in a web browser?",
-        a: "Java",
-        b: "C",
-        c: "Python",
-        d: "javascript",
-        correct: "d",
-    },
-    {
-        question: "What does CSS stand for?",
-        a: "Central Style Sheets",
-        b: "Cascading Style Sheets",
-        c: "Cascading Simple Sheets",
-        d: "Cars SUVs Sailboats",
-        correct: "b",
-    },
-    {
-        question: "What does HTML stand for?",
-        a: "Hypertext Markup Language",
-        b: "Hypertext Markdown Language",
-        c: "Hyperloop Machine Language",
-        d: "Helicopters Terminals Motorboats Lamborginis",
-        correct: "a",
-    },
-    {
-        question: "What year was JavaScript launched?",
-        a: "1996",
-        b: "1995",
-        c: "1994",
-        d: "none of the above",
-        correct: "b",
-    },
-];
-const quiz= document.getElementById('quiz')
-const answerEls = document.querySelectorAll('.answer')
-const questionEl = document.getElementById('question')
-const a_text = document.getElementById('a_text')
-const b_text = document.getElementById('b_text')
-const c_text = document.getElementById('c_text')
-const d_text = document.getElementById('d_text')
+//import myJSON from "./js/question.json" assert {type:"json"};
+
+// const json = [
+//     {
+//         question: "Quel est la signification du sigle SIDA ?",
+//         a: "Syndrome d'immunodéficience acquise",
+//         b: "Swedish International Developpment Authority",
+//         c: "Syndrome d’immunition asperger",
+//         d: "Sonorite d’identification artificiel",
+//         correct: "a"
+//     }
+// ]
+
+var json = (function () {
+    var json = null;
+    $.ajax({
+        'async': false,
+        'global': false,
+        'url': "./js/question.json",
+        'dataType': "json",
+        'success': function (data) {
+            json = data;
+        }
+    });
+    return json;
+})(); 
+
+var quiz= document.getElementById('quiz')
+var answerEls = document.querySelectorAll('.answer')
+var questionEl = document.getElementById('question')
+var a_text = document.getElementById('a_text')
+var b_text = document.getElementById('b_text')
+var c_text = document.getElementById('c_text')
+var d_text = document.getElementById('d_text')
 const submitBtn = document.getElementById('submit')
 let currentQuiz = 0
 let score = 0
 loadQuiz()
 function loadQuiz() {
     deselectAnswers()
-    const currentQuizData = quizData[currentQuiz]
-    questionEl.innerText = currentQuizData.question
-    a_text.innerText = currentQuizData.a
-    b_text.innerText = currentQuizData.b
-    c_text.innerText = currentQuizData.c
-    d_text.innerText = currentQuizData.d
+    var current = json[currentQuiz]
+    questionEl.textContent= current.question
+    a_text.textContent = current.a
+    b_text.textContent = current.b
+    c_text.textContent = current.c
+    d_text.textContent = current.d
 }
 function deselectAnswers() {
     answerEls.forEach(answerEl => answerEl.checked = false)
@@ -65,19 +58,26 @@ function getSelected() {
     return answer
 }
 submitBtn.addEventListener('click', () => {
-    const answer = getSelected()
+    var answer = getSelected()
+    var current = json[currentQuiz]
+    console.log(current.correct)
+    console.log(answer)
     if(answer) {
-       if(answer === quizData[currentQuiz].correct) {
+        
+       if(answer == current.correct) {
            score++
+           console.log(score)
+
        }
        currentQuiz++
-       if(currentQuiz < quizData.length) {
+       if(currentQuiz < json.length) {
            loadQuiz()
        } else {
-           quiz.innerHTML = `
-           <h2>You answered ${score}/${quizData.length} questions correctly</h2>
+            quiz.innerHTML = `
+           <h2>You answered ${score}/${json.length} questions correctly</h2>
            <button onclick="location.reload()">Reload</button>
            `
        }
     }
-})
+}
+)

@@ -1,48 +1,55 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QUIZ nuit de l'info 2022 - Équipe OnlyHouse</title>
-    <link rel="stylesheet" href="css/styles.css">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>L'association - Nuit de l'info - OnlyHouse</title>
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/splide.min.css">
+    <script src="js/splide.min.js"></script>
 </head>
 <body>
-    <header>
+	<header>
+ 
         <div class="logo"><a href="#"><img src="img/logo-nuit_info.png" alt=""></a></div>
         <div class="navbar">
             <ul>
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="quiz.html">Quiz</a></li>
-                <li><a href="#">L'association</a></li>
-                <li><a href="#">Liens</a></li>
+                <li><a href="association.html">L'association</a></li>
+                <li><a href="data.html">Données</a></li>
             </ul>
         </div>
     </header>
 
-    <main>
-        <h1><center><img src="img/logo-n2i-2022.png" alt="logo nuit de l'info" height="200px"></center></h1>
-        <div class="asso">
-            <h2>LA NUIT DE L'INFO, C'EST QUOI ?</h2>
-            <p>La Nuit de l’Info est une compétition nationale qui réunit étudiants, enseignants et entreprises pour travailler ensemble sur le développement d’une application web.</p>
-            <p>La Nuit se déroule tous les ans, du premier jeudi du mois de décembre, coucher du soleil, jusqu'au lever du soleil le lendemain matin.</p>
-            <p>Les participants ont la durée d'une nuit pour proposer, implémenter et packager une application Web 2.0.</p>
-            <img src="img/nuit_0.png" alt="image" style="position: center;">
-            <p>Durant cette nuit, des partenaires lancent des défis (par exemple : interface web la plus ergonomique, meilleure architecture du système, meilleure collaboration, etc.) aux équipes participantes, et proposent des prix pour les équipes ayant le mieux réussi.</p>
-            <p>La nuit est aussi l'occasion de rencontres et discussions avec les entreprises, les ingénieurs et les chefs d'entreprises qui viennent soutenir les étudiants, voire leur donner quelques conseils pour mieux relever les défis.</p>
-            
-        </div>
+	<main>
+			<div class="splide" role="group" aria-label="Splide Basic HTML Example">
+				<div class="splide__track">
+					  <ul class="splide__list">
+						<li class="splide__slide"><img class = "sida" src="img/sida1.jpg" alt="sida1"></li>
+						<li class="splide__slide"><img class = "sida" src="img/sida2.jpg" alt="sida2"></li>
+						<li class="splide__slide"><img class = "sida" src="img/sida3.png" alt="sida3"></li>
+					  </ul>
+				</div>
+			</div>
+	</main>
 
-        <div class="asso">
-            <h2>OBJECTIFS DE LA NUIT</h2>
-            <p>L’objectif de cette manifestation est de faire travailler ensemble les étudiants voulant participer à un défi informatique national. Ces défis portent la plupart du temps sur l’utilisation de nouvelles technologies telles que le Web 2.0, les réseaux sociaux et les technologies multimédias.</p>
-            <p>Cette manifestation, outre son aspect unique et original, permet aux étudiants en informatique, mais aussi d’autres formations telles que la communication et le multimédia par exemple, de participer à un travail collectif de manière autonome autour de thématiques d’actualité.</p>
-            <img src="img/logo_n2i_color_moon.svg" alt="moon" style="position: center;">
-            <p>Une certaine transversalité est donc encouragée au sein des équipes pour permettre aux étudiants de concourir sur plusieurs défis connexes au défi principal, et de multiplier leurs chances de remporter un prix. Ils y rencontrent leurs enseignants dans un cadre plus convivial où l’enseignant n’est pas là pour les évaluer mais pour les aider à s’organiser face à un cahier des charges complexe, et leur permettre de mettre en application leurs connaissances informatiques et leur créativité.</p>
-            <p>Pour les personnels, cette manifestation est l’occasion d’un décloisonnement très enrichissant où bonnes volontés, compétences et bonne humeur sont réunies.
-                Par ailleurs, le soutien de partenaires donne aux défis à relever un réel intérêt pour les étudiants.</p>
-            
-        </div>
-    </main>
+	<footer>
+		<ul>
+			<li><a href="plan.html">Plan du site</a></li>
+			<li><a href="about.html">À propos</a></li>
+			<li><a href="notre_equipe">Notre équipe</a></li>
+		</ul>
+	</footer>
+
+	<script>
+	var splide = new Splide( '.splide', {
+  type   : 'loop',
+  padding: '5rem',
+} );
+
+splide.mount();
+	  </script>
 </body>
 </html>

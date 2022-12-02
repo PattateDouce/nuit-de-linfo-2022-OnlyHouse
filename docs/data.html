@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Graphiques nuit de l'info 2022 - Équipe OnlyHouse</title>
+	<link rel="stylesheet" href="css/styles.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.js"></script>
+</head>
+<body>
+	<header>
+ 
+		<div class="logo"><a href="#"><img src="img/logo-nuit_info.png" alt=""></a></div>
+		<div class="navbar">
+			<ul>
+				<li><a href="index.html">Accueil</a></li>
+				<li><a href="quiz.html">Quiz</a></li>
+				<li><a href="association.html">L'association</a></li>
+				<li><a href="data.html">Données</a></li>
+			</ul>
+		</div>
+	</header>
+
+	<div class="menu-container">
+		<h1 style="text-align: center;">Données liées aux IST représentées par des graphiques</h1>
+		<br>
+		<label>Choisissez un élément à afficher :</label>
+
+		<div class="dropdown-vertically">
+			<ul>
+				<li>
+					<a>VIH</a>
+					<ul>
+						<li><a onclick="load_transmission();">Transmission</a></li>
+						<li><a onclick="load_multiple();">Mortalité</a></li>
+					</ul>
+				</li>
+				<li>
+					<a>Contraception</a>
+					<ul>
+						<li><a onclick="load_pie();">Efficacité</a></li>
+						<li><a onclick="load_bar2();">Plus utilisés</a></li>
+					</ul>
+				</li>
+				<li>
+					<a>MST</a>
+					<ul>
+						<li><a onclick="load_multiple2();">Evolution</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+
+		<div class="chart-container">
+			<div id="transmission">
+				<canvas id="transmission_chart"></canvas>
+				<br><p>1</p>
+			</div>
+			<div id="line">
+				<canvas id="linec"></canvas>
+				<br><p>Moyen de contraception efficacité</p>
+				<br><a href="https://www.tf1info.fr/sante/sante-sexe-sterilet-preservatif-pilule-avec-quel-moyen-de-contraception-risquez-vous-le-moins-l-accident-2099842.html">Source</a>
+			</div>
+			<div id="multiple">
+				<canvas id="multiplec"></canvas>
+				<br><p>Nouveaux cas et décés causé par le SIDA de 1990 à 2015.</p>
+			</div>
+			<div id="bar">
+				<canvas id="barc"></canvas>
+				<br><p>Risque en pourcentage de contracter le VIH pour 5 types de rapport sexuel.</p>
+				<br><a href="https://fr.wikipedia.org/wiki/Infection_sexuellement_transmissible">Source (Wikipedia)</a>
+			</div>
+			<div id="pie">
+				<canvas id="piec"></canvas>
+				<br><p>Contraception les plus utilisées.</p>
+				<br><a href="https://www.ined.fr/fr/tout-savoir-population/memos-demo/faq/methodes-contraception-les-plus-utilisees-monde/#:~:text=Les%20m%C3%A9thodes%20de%20contraception%20les%20plus%20utilis%C3%A9es%20sont%2C%20par%20ordre,les%20m%C3%A9thodes%20traditionnelles%20(9%20%25%20-">Source</a>
+			</div>
+			<div id="doughnut">
+				<canvas id="doughnutc"></canvas>
+				<br><p>6</p>
+			</div>
+		</div>
+	</div>
+
+	<footer>
+		<ul>
+			<li><a href="plan.html">Plan du site</a></li>
+			<li><a href="about.html">À propos</a></li>
+			<li><a href="notre_equipe">Notre équipe</a></li>
+		</ul>
+	</footer>
+</body>
+	<script src="js/data.js"></script>
+	<script src="js/app.js"></script>
+</html>

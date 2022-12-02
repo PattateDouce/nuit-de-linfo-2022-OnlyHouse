@@ -1,0 +1,106 @@
+/*
+=============================
+		PAGE DATA WIKIFIESTA 
+=============================
+*/
+
+#question {
+	text-align: center;
+}
+
+#valider {
+	background-image: linear-gradient(to right, #0575E6 0%, #021B79  51%, #0575E6  100%);
+	margin: 20%;
+	padding: 15px 45px;
+	text-align: center;
+	text-transform: uppercase;
+	transition: 0.5s;
+	background-size: 200% auto;
+	transition: 0.5s;
+	border: 0px;
+	box-shadow: 0 0 20px #eee;
+	color: #fff;
+	border-radius: 10px;
+	display: block;
+  }
+
+#valider:hover {
+	background-position: right center;
+	color: #fff;
+	text-decoration: none;
+  }
+
+.menu-container-1 {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	/* position: fixed; */
+	/* padding-top: 50px; */
+	/* margin: left; */
+	/* width: 500px; */
+	/* height: 100%; */
+	/* border-top-right-radius: 10px; */
+	/* background: linear-gradient(145deg, #cacaca, #f0f0f0); */
+}
+
+div.dropdown-vertically {
+	position:relative;
+	width:200px;
+	left : -151.9px;
+	padding-top: 10px;
+}
+
+div.dropdown-vertically ul {
+	list-style: none;
+	background-image: url(img/arriere-du-menu.jpg);
+	font-size:20px;
+}
+
+div.dropdown-vertically li {
+	position:relative;
+	
+}
+
+div.dropdown-vertically a { 
+	display:block;
+	text-decoration:none;
+	padding:10px;
+	color:#000000;
+	border-radius: 10px;
+	background: linear-gradient(145deg, #00ff55, #01fcda);
+	
+}
+
+div.dropdown-vertically li:hover > a {
+	color:#000000;
+	background: linear-gradient(145deg, #01d347, #02dabd);
+	cursor: pointer;
+}
+
+div.dropdown-vertically ul ul {
+	position:absolute;
+	top:0;
+	width:100%;
+	visibility:hidden;
+}
+
+div.dropdown-vertically li:hover > ul {
+	left:100%;
+	visibility:visible;
+}
+
+list {
+    color: red;
+}
+
+.table{
+    
+}
+/* 
+div.dropdow-vertocally li:hover > ul li{
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    border-radius: 20px;
+
+} */
